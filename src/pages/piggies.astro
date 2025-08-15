@@ -1,0 +1,45 @@
+---
+import { Client } from "@notionhq/client";
+import { Link } from "../components/ui/button";
+import Container from "../components/Container.astro";
+import { getEntriesFromDatabase, getPigsData } from "../lib/notion/get-entries";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import PiggyCard from "../components/PiggyCard.astro";
+import { processPigsWithCachedImages } from "../lib/image-cache";
+
+const pigsData = await getPigsData("Available");
+
+const pigsWithCachedImages = await processPigsWithCachedImages(pigsData);
+---
+
+<Layout
+  title="Our Little Piggies - Adopt a Guinea Pig"
+  description="Browse guinea pigs available for adoption at This Little Piggy rescue. Find your new furry friend and learn how to register your interest."
+>
+  <Container className="mt-12 mb-24 flex flex-col gap-y-4">
+    <Header>Our Little Piggies</Header>
+
+    <p class="whitespace-pre-wrap">
+      We often have more guinea pigs than are shown on our website, and
+      sometimes have short waiting lists for adoption (particularly for single
+      piggies looking for companions).
+    </p>
+    <p class="whitespace-pre-wrap">
+      If you would like to adopt a guinea pig from us please register your
+      interest by clicking “Register Interest” and completing our form. If you
+      can’t see a piggy that matches your requirements please we may still be
+      able to help if you register your interest with us.
+    </p>
+
+    <Link
+      href="https://docs.google.com/forms/d/e/1FAIpQLSdqYwW5VEufOfPojurwd53F6pADJ3zVbuK1ZLExqdqRyqyBEg/viewform?usp=sharing"
+    >
+      Register Interest
+    </Link>
+
+    <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {pigsWithCachedImages.map((entry) => <PiggyCard pig={entry} />)}
+    </div>
+  </Container>
+</Layout>

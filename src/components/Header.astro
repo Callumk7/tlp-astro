@@ -1,0 +1,32 @@
+---
+import { cva } from "class-variance-authority";
+import clsx from "clsx";
+
+export interface Props {
+  header?: "one" | "two" | "three";
+  decoration?: "underline";
+  class?: string;
+}
+
+const headerVariants = cva("font-playfair font-bold", {
+  variants: {
+    header: {
+      one: "text-6xl",
+      two: "text-4xl",
+      three: "text-3xl",
+    },
+    decoration: {
+      underline: "underline decoration-plum-10 decoration-3",
+    },
+  },
+  defaultVariants: {
+    header: "one",
+  },
+});
+
+const { header, decoration, class: className, ...props } = Astro.props;
+---
+
+<h1 class={clsx(headerVariants({ className, header, decoration }))} {...props}>
+  <slot />
+</h1>

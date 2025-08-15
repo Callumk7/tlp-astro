@@ -1,0 +1,84 @@
+---
+import { CldImage } from "astro-cloudinary";
+import type { ProcessedPig } from "../lib/image-cache";
+
+interface Props {
+  pig: ProcessedPig;
+}
+
+const { pig } = Astro.props;
+---
+
+<div
+  class="bg-sage1 shadow-sage3 flex h-[500px] flex-auto flex-col gap-4 rounded-lg shadow-xl"
+>
+  <div class="h-1/2 w-full overflow-hidden p-3">
+    {
+      pig.cachedImageUrl && (
+        <CldImage
+          width={960}
+          height={600}
+          src={pig.cachedImageUrl}
+          alt={`Picture of ${pig.name} the guinea pig`}
+          class="h-full w-full rounded-md object-cover"
+        />
+      )
+    }
+  </div>
+  <div class="flex flex-auto flex-col gap-4 p-4">
+    <div>
+      {
+        pig.name && (
+          <h2 class="text-foreground decoration-plum9 font-yrsa text-2xl font-bold underline decoration-2">
+            {pig.name}
+          </h2>
+        )
+      }
+      {
+        pig.age && (
+          <p class="text-sage11 text-sm">
+            <strong>Age:</strong> <em>{pig.age}</em>
+          </p>
+        )
+      }
+    </div>
+    <div class="flex flex-wrap gap-3">
+      {
+        pig.sex && (
+          <span class="text-background bg-sage3 rounded-lg px-[4px] py-1 text-sm">
+            {pig.sex}
+          </span>
+        )
+      }
+      {
+        pig.companionship && (
+          <span class="text-background bg-sage3 rounded-lg px-[4px] py-1 text-sm">
+            {pig.companionship}
+          </span>
+        )
+      }
+      {
+        pig.neutered && (
+          <span class="text-background bg-sage3 rounded-lg px-[4px] py-1 text-sm">
+            {pig.neutered}
+          </span>
+        )
+      }
+      {
+        pig.healthChecked && (
+          <span class="text-background rounded-lg bg-emerald-500 px-[4px] py-1 text-sm">
+            Health Checked ✅
+          </span>
+        )
+      }
+      {
+        pig.status && (
+          <span class="text-background rounded-lg bg-blue-500 px-[4px] py-1 text-sm">
+            {pig.status}
+          </span>
+        )
+      }
+    </div>
+    {pig.description && <p class="rounded-md text-sm">{pig.description}</p>}
+  </div>
+</div>

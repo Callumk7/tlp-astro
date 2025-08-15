@@ -1,0 +1,36 @@
+---
+import { Button } from "./ui/button";
+
+export interface Props {
+  data: InfoBoxData[];
+}
+
+type InfoBoxData = {
+  title: string;
+  link: string;
+  body: string;
+  cta: {
+    href: string;
+    text: string;
+  };
+};
+
+const { data } = Astro.props;
+---
+
+<div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
+  {data.map((item) => (
+    <div class="relative flex flex-col gap-y-4 rounded-md border-2 border-sage-12 bg-sage-1 p-6 transition-colors ease-in-out hover:bg-plum-2">
+      <a
+        href={item.link}
+        class="font-yrsa pb-4 text-2xl font-bold text-sage-12 underline decoration-plum-9 decoration-2"
+      >
+        {item.title}
+      </a>
+      <p class="mb-16">{item.body}</p>
+      <Button className="absolute bottom-5 left-5" client:load>
+        <a href={item.cta.href}>{item.cta.text}</a>
+      </Button>
+    </div>
+  ))}
+</div>

@@ -1,11 +1,134 @@
 ---
-import Welcome from "../components/Welcome.astro";
+import Container from "../components/Container.astro";
 import Layout from "../layouts/Layout.astro";
+import Banner from "../components/Banner.astro";
+import Title from "../components/Title.astro";
+import Header from "../components/Header.astro";
+import FloatingBanner from "../components/FloatingBanner.astro";
+import InfoBoxes from "../components/InfoBoxes.astro";
+import { getCountOfEntriesFromDatabase } from "../lib/notion/get-entries";
+import { Client } from "@notionhq/client";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const infoBoxData = [
+  {
+    title: "Donate!",
+    body: "Your donations help us provide care for our guinea pigs and keep the rescue running.",
+    link: "/donate",
+    cta: {
+      text: "Donate Now",
+      href: "/donate",
+    },
+  },
+  {
+    title: "Volunteer or Foster!",
+    body: "Join our team of compassionate volunteers to help us care for our guinea pigs and find them new homes.",
+    link: "/contact",
+    cta: {
+      text: "Contact Us",
+      href: "/contact",
+    },
+  },
+  {
+    title: "Adopt!",
+    body: "Open your heart and home to a guinea pig in need.",
+    link: "/piggies",
+    cta: {
+      text: "Our Piggies",
+      href: "/piggies",
+    },
+  },
+];
+
+const notion = new Client({ auth: import.meta.env.NOTION_KEY });
+
+const piggyCount = await getCountOfEntriesFromDatabase(
+  notion,
+  import.meta.env.DATABASE_ID!,
+);
 ---
 
-<Layout>
-  <Welcome />
+<Layout
+  title="This Little Piggy - Guinea Pig Rescue & Rehoming"
+  description="This Little Piggy is a guinea pig rescue in Richmond, London, dedicated to rehoming guinea pigs and providing a safe haven for those in need."
+>
+  <main class="relative bottom-0">
+    <section class="relative mx-auto max-w-6xl">
+      <Container className="relative z-10 mt-10">
+        <div class="my-20 grid grid-cols-1 gap-4 lg:my-0 lg:grid-cols-3">
+          <div class="flex flex-col justify-between gap-y-10 md:col-span-2">
+            <div class="flex w-full flex-col gap-y-5">
+              <Banner
+                message="This Little Piggy in the news!"
+                link={{
+                  text: "Read About Us",
+                  href: "https://www.theguardian.com/lifeandstyle/2023/oct/30/the-pets-ill-never-forget-pudding-and-popcorn-the-guinea-pigs-who-saved-me-during-lockdown",
+                }}
+              />
+              <Title>Welcome to This Little Piggy</Title>
+              <p class="justify-self-start">
+                We are a guinea pig rescue located in the heart of Richmond,
+                London. We have rescued over 1000 guinea pigs since our founding
+                in 2012 and are passionate about providing a haven to guinea
+                pigs in need and finding them new forever homes.
+              </p>
+            </div>
+            <div class="flex flex-col gap-y-5">
+              <Header decoration="underline" header="two"> Our Mission </Header>
+              <p>
+                Our mission is to rescue guinea pigs from neglect, abandonment,
+                and surrender. We provide them with a safe and loving
+                environment where they can receive the care they need until they
+                find a new home. For guinea pigs with special needs we offer
+                permanent sanctuary at the rescue.
+              </p>
+            </div>
+            <div class="flex flex-col gap-y-5">
+              <Header decoration="underline" header="two">
+                Our Services
+              </Header>
+              <ul class="flex list-disc flex-col gap-3 pl-3">
+                <li>We provide care for over 30 guinea pigs.</li>
+                <li>
+                  Guinea pig bonding, carefully assessing introductions prior to
+                  adoption to ensure they are a good match.
+                </li>
+                <li>Educating adopters on proper care of guinea pigs.</li>
+                <li>
+                  Lifelong support for our guinea pigs, our guinea pigs always
+                  have a space with us if for any reason the adoption doesn’t
+                  work out.
+                </li>
+                <li>Boarding guinea pigs to help support the rescue.</li>
+              </ul>
+            </div>
+          </div>
+          <FloatingBanner
+            class="relative top-28 w-fit px-4 lg:absolute lg:top-12 lg:right-12"
+          >
+            <span>Over</span>
+            <span class="text-2xl font-black">{piggyCount}</span>
+            <span>piggies need loving homes!</span>
+          </FloatingBanner>
+        </div>
+      </Container>
+    </section>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 155 1440 165"
+      class="mt-14 fill-teal-3"
+    >
+      <path
+        fill-opacity="1"
+        d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+      ></path>
+    </svg>
+    <section class="relative h-fit bg-teal-3 pb-32">
+      <Container>
+        <h2 class="w-full text-center font-yrsa text-5xl font-bold">
+          How You Can Help
+        </h2>
+        <InfoBoxes data={infoBoxData} />
+      </Container>
+    </section>
+  </main>
 </Layout>

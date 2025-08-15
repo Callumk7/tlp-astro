@@ -1,1 +1,83 @@
 @import "tailwindcss";
+
+@import "@radix-ui/colors/plum.css";
+@import "@radix-ui/colors/sage.css";
+@import "@radix-ui/colors/bronze.css";
+@import "@radix-ui/colors/teal.css";
+@import "@radix-ui/colors/tomato.css";
+
+@import "tw-animate-css";
+
+@theme {
+  --color-sage-1: var(--sage-1);
+  --color-sage-2: var(--sage-2);
+  --color-sage-3: var(--sage-3);
+  --color-sage-4: var(--sage-4);
+  --color-sage-5: var(--sage-5);
+  --color-sage-6: var(--sage-6);
+  --color-sage-7: var(--sage-7);
+  --color-sage-8: var(--sage-8);
+  --color-sage-9: var(--sage-9);
+  --color-sage-10: var(--sage-10);
+  --color-sage-11: var(--sage-11);
+  --color-sage-12: var(--sage-12);
+
+  --color-plum-1: var(--plum-1);
+  --color-plum-2: var(--plum-2);
+  --color-plum-3: var(--plum-3);
+  --color-plum-4: var(--plum-4);
+  --color-plum-5: var(--plum-5);
+  --color-plum-6: var(--plum-6);
+  --color-plum-7: var(--plum-7);
+  --color-plum-8: var(--plum-8);
+  --color-plum-9: var(--plum-9);
+  --color-plum-10: var(--plum-10);
+  --color-plum-11: var(--plum-11);
+  --color-plum-12: var(--plum-12);
+
+  --color-bronze-1: var(--bronze-1);
+  --color-bronze-2: var(--bronze-2);
+  --color-bronze-3: var(--bronze-3);
+  --color-bronze-4: var(--bronze-4);
+  --color-bronze-5: var(--bronze-5);
+  --color-bronze-6: var(--bronze-6);
+  --color-bronze-7: var(--bronze-7);
+  --color-bronze-8: var(--bronze-8);
+  --color-bronze-9: var(--bronze-9);
+  --color-bronze-10: var(--bronze-10);
+  --color-bronze-11: var(--bronze-11);
+  --color-bronze-12: var(--bronze-12);
+
+  --color-teal-1: var(--teal-1);
+  --color-teal-2: var(--teal-2);
+  --color-teal-3: var(--teal-3);
+  --color-teal-4: var(--teal-4);
+  --color-teal-5: var(--teal-5);
+  --color-teal-6: var(--teal-6);
+  --color-teal-7: var(--teal-7);
+  --color-teal-8: var(--teal-8);
+  --color-teal-9: var(--teal-9);
+  --color-teal-10: var(--teal-10);
+  --color-teal-11: var(--teal-11);
+  --color-teal-12: var(--teal-12);
+
+  --color-tomato-1: var(--tomato-1);
+  --color-tomato-2: var(--tomato-2);
+  --color-tomato-3: var(--tomato-3);
+  --color-tomato-4: var(--tomato-4);
+  --color-tomato-5: var(--tomato-5);
+  --color-tomato-6: var(--tomato-6);
+  --color-tomato-7: var(--tomato-7);
+  --color-tomato-8: var(--tomato-8);
+  --color-tomato-9: var(--tomato-9);
+  --color-tomato-10: var(--tomato-10);
+  --color-tomato-11: var(--tomato-11);
+  --color-tomato-12: var(--tomato-12);
+}
+
+@theme inline {
+  --font-yrsa: var(--font-yrsa);
+  --font-oxygen: var(--font-oxygen);
+  --font-inter: var(--font-inter);
+  --font-playfair: var(--font-playfair);
+}

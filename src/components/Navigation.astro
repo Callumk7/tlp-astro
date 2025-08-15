@@ -1,0 +1,61 @@
+---
+import clsx from "clsx";
+
+const links = [
+  {
+    id: 0,
+    href: "/",
+    name: "Home",
+  },
+  {
+    id: 1,
+    href: "/piggies",
+    name: "Our Piggies",
+  },
+  {
+    id: 3,
+    href: "/how-to-adopt",
+    name: "How to Adopt",
+  },
+  {
+    id: 4,
+    href: "/boarding",
+    name: "Boarding",
+  },
+  {
+    id: 5,
+    href: "/surrender",
+    name: "Give up a Piggy",
+  },
+];
+
+const pathname = "/";
+
+// TODO: remove clsx from astro, and use class:list instead
+---
+
+<nav
+  class="relative z-20 mx-auto flex w-4/5 flex-row items-center justify-end py-5 lg:justify-between lg:gap-12"
+>
+  {/*Standard navigation menu, inline when screens are large or above.*/}
+  <ul class="hidden flex-row items-center justify-start gap-8 lg:flex">
+    {
+      links.map((link) => {
+        return (
+          <li>
+            <a
+              href={link.href}
+              class={clsx(
+                "font-inter font-semibold text-sage-10 transition-colors ease-in-out hover:text-sage-12",
+                pathname === link.href &&
+                  "text-sage-12 underline decoration-plum-9 decoration-2",
+              )}
+            >
+              {link.name}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

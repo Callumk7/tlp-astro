@@ -1,0 +1,80 @@
+---
+import Container from "../components/Container.astro";
+import Header from "../components/Header.astro";
+import { ContentTitle } from "../components/react/content-title";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Guinea Pig Boarding - Safe & Comfortable Care"
+  description="Discover our guinea pig boarding services in Richmond, London. We offer spacious cages, daily care, health checks, and outdoor play areas."
+>
+  <Container className="mx-auto mt-12 mb-24 flex max-w-3xl flex-col gap-4">
+    <Header>Boarding</Header>
+    <p class="mb-3">
+      Our boarding service offers comfortable accommodation, experienced care
+      and health monitoring, ensuring your guinea pigs are well looked after
+      while you are away. In addition, all proceeds from boarding go toward
+      funding the rescue and allow us to continue to help guinea pigs in need.
+    </p>
+    <ContentTitle title="What we Offer:" />
+    <ul class="mb-7 ml-5 list-outside list-disc space-y-3">
+      <li>
+        <strong>Spacious Cages:</strong> Your guinea pigs will enjoy large, secure
+        enclosures equipped with fleece or vetbed liners for their comfort.
+      </li>
+      <li>
+        <strong>Daily Care:</strong> We provide fresh water, plenty of hay, high-quality
+        nuggets, and a variety of fresh veggies daily to keep your piggies happy
+        and healthy.
+      </li>
+      <li>
+        <strong>Health Checks:</strong> We conduct weekly weight checks and health
+        inspections to monitor their well-being, and we will increase the frequency
+        if we have any concerns.
+      </li>
+      <li>
+        <strong>Outdoor & Indoor Play Areas:</strong> On nice days, your guinea pigs
+        will have access to large outdoor runs where they can graze on fresh grass.
+        During poor weather, we offer indoor play pens for a fun, safe environment.
+      </li>
+    </ul>
+    <ContentTitle title="Additional Services:" />
+    <ul class="mb-7 ml-5 list-outside list-disc space-y-3">
+      <li>
+        <strong>Medication:</strong> We can administer medication to guinea pigs
+        that require it, but please discuss this with us in advance to ensure we
+        can meet your pet&apos;s needs.
+      </li>
+      <li>
+        <strong>Veterinary Care:</strong> If your guinea pig falls ill during their
+        stay, we’ll ensure they receive prompt attention from our experienced vet.
+      </li>
+    </ul>
+    <ContentTitle title="Pricing:" />
+    <ul class="mb-7 ml-5 list-outside list-disc space-y-3">
+      <li>
+        £13 per night for a pair of guinea pigs (+ £5 per night per additional
+        piggy).
+      </li>
+      <li>
+        We are happy to discuss <strong>discounted rates</strong> for large groups
+        of guinea pigs and extended stays.
+      </li>
+    </ul>
+    <div class="mb-7 rounded-lg bg-teal-3 p-4 pt-6 shadow-lg shadow-teal-1">
+      <ContentTitle title="Book in Advance" />
+      <p class="my-3">
+        Please note that we get busy during peak periods, especially school
+        holidays. Book early to secure a space for your guinea pigs and ensure
+        they have a comfortable place to stay while you’re away!
+      </p>
+    </div>
+    <p>
+      To book or inquire further, please contact Heather at{" "}
+      <a class="link" href="mailto:mrsheatherreid@gmail.com">
+        mrsheatherreid@gmail.com
+      </a>
+    </p>
+  </Container>
+</Layout>
