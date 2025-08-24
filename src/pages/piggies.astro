@@ -10,6 +10,8 @@ import { processPigsWithCachedImages } from "../lib/image-cache";
 const pigsData = await getPigsData("Available");
 
 const pigsWithCachedImages = await processPigsWithCachedImages(pigsData);
+
+export const prerender = false;
 ---
 
 <Layout
