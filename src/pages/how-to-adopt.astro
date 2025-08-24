@@ -1,0 +1,263 @@
+---
+import Container from "../components/Container.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import { Image } from "astro:assets";
+
+import imageOne from "../assets/how-to-adopt/1.jpg";
+import imageTwo from "../assets/how-to-adopt/2.jpg";
+import imageThree from "../assets/how-to-adopt/3.jpg";
+import imageFour from "../assets/how-to-adopt/4.jpg";
+---
+
+<Layout
+  title="How to Adopt - This Little Piggy"
+  description="This Little Piggy is a guinea pig rescue in Richmond, London, dedicated to rehoming guinea pigs and providing a safe haven for those in need."
+>
+  <Container className="mx-auto mt-12 max-w-5xl pb-24">
+    <Header class="mb-20">How to Adopt</Header>
+    <div class="grid gap-14 lg:grid-cols-2">
+      <!-- Our Adoption Criteria -->
+      <div>
+        <h1
+          class="font-yrsa text-3xl font-bold underline decoration-plum-9 decoration-2"
+        >
+          Our Adoption Criteria
+        </h1>
+        <ol class="ml-5 list-outside list-decimal">
+          <li class="py-3 pl-5">
+            <div class="space-y-2">
+              <p>
+                <strong>Cage Space:</strong> A spacious cage which is at least 150cm
+                long and 60cm wide (or equivalent) for a pair of piggies.
+              </p>
+              <ul class="ml-5 list-outside list-disc">
+                <li>
+                  <a
+                    class="link"
+                    href="https://candcguineapigcages.co.uk/product/2-x-4-grid-cage/"
+                    target="_blank"
+                  >
+                    C&C 4x2
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link"
+                    href="https://www.petsathome.com/product/ferplast-indoor-rabbit-and-guinea-pig-home-grey-140/7152302P?productId=7152302&purchaseType=one-time&size=size140"
+                    target="_blank"
+                  >
+                    Ferplast Rabbit 140
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link"
+                    href="https://littlepetwarehouse.co.uk/products/indoor-square-cage-rabbit-guinea-pig-by-little-friends/"
+                    target="_blank"
+                  >
+                    Little Friends 100 square cage
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="py-3 pl-5">
+            <p>
+              <strong>Indoor Home:</strong> Their primary home must be indoors throughout
+              the year.
+            </p>
+          </li>
+
+          <li class="py-3 pl-5">
+            <p>
+              <strong>Enrichment and excercise:</strong> At least 1 hour of exercise
+              and play outside of their cage each day. This can be in the form of
+              a secure outdoor run during the summer, but a piggy-safe indoor space
+              will also need to be available for bad weather.
+            </p>
+          </li>
+
+          <li class="py-3 pl-5">
+            <p>
+              <strong>Safe Bedding:</strong> Avoid wood shavings or sawdust as bedding.
+              Opt for safer alternatives like Megazorb, Fitch, Tea bag bedding, Carefresh,
+              or alternatively invest in fleece or Vetbed cage liners.
+            </p>
+          </li>
+
+          <li class="py-3 pl-5">
+            <p>
+              <strong>Feed:</strong> 24/7 access to plentiful hay is the most critical
+              element to a guinea pig's diet. We also recommend feeding a small amount
+              of extruded guinea pig nuggets as well as fresh veggies.
+            </p>
+          </li>
+
+          <li class="py-3 pl-5">
+            <p>
+              <strong>Children: </strong> We ask that any children living in the
+              home are brought to meet the guinea pigs at the rescue. We will help
+              educate them on how to interact calmly and respectfully with these
+              gentle creatures. Guinea pigs must be considered family pets, with
+              the ultimate responsibility for their care falling on adults.
+            </p>
+          </li>
+        </ol>
+      </div>
+
+      <Image
+        src={imageOne}
+        alt="A guinea pig"
+        class="overflow-hidden rounded-lg shadow-2xl shadow-plum-5"
+      />
+
+      <Image
+        src={imageTwo}
+        alt="A guinea pig"
+        class="overflow-hidden rounded-lg shadow-2xl shadow-plum-5"
+      />
+
+      <!-- What we Don't Do -->
+      <div>
+        <h1
+          class="font-yrsa text-3xl font-bold underline decoration-plum-9 decoration-2"
+        >
+          What we Don't Do
+        </h1>
+        <ol class="ml-5 list-outside list-decimal">
+          <li class="py-3 pl-5">
+            <p>
+              <strong>School or Non-Private Environments:</strong> To ensure consistent
+              and high-quality care, we do not rehome guinea pigs to schools or other
+              non-private settings.
+            </p>
+          </li>
+
+          <li class="py-3 pl-5">
+            <p>
+              <strong>Outdoor Homes:</strong> Guinea pigs are sensitive to temperature
+              extremes and we do not rehome guinea pigs to live outdoors.
+            </p>
+          </li>
+
+          <li class="py-3 pl-5">
+            <p>
+              <strong>Single or Rabbit Housing:</strong> Guinea pigs are social creatures
+              and thrive in the company of their own kind. Living alone or with rabbits
+              can lead to loneliness and depression.
+            </p>
+          </li>
+
+          <li class="py-3 pl-5">
+            <p>
+              <strong>Breeding:</strong> We prioritise finding loving homes for guinea
+              pigs and do not rehome them for breeding purposes.
+            </p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Bonding Guinea Pigs -->
+      <div>
+        <h1
+          class="font-yrsa text-3xl font-bold underline decoration-plum-9 decoration-2"
+        >
+          Bonding Guinea Pigs
+        </h1>
+        <ol class="ml-5 list-outside list-decimal">
+          <li class="py-3 pl-5">
+            <p>
+              <strong>Respecting Bonds:</strong> We value the strong bonds that guinea
+              pigs form and never separate bonded guinea pigs.
+            </p>
+          </li>
+
+          <li class="py-3 pl-5">
+            <p>
+              <strong>Expert Supervision:</strong> If you have a single guinea pig,
+              we facilitate a bonding process at our rescue. This involves a 24-hour
+              observation period to ensure compatibility.
+            </p>
+          </li>
+
+          <li class="py-3 pl-5">
+            <p>
+              <strong>Personalised Matching</strong> While your piggy is with us
+              we closely observe their interactions with our guinea pigs. Not all
+              guinea pigs are compatible, and we prioritise their preferences to
+              ensure a suitable match.
+            </p>
+          </li>
+
+          <li class="py-3 pl-5">
+            <p>
+              <strong>Neutering:</strong> In some cases, we may recommend neutering
+              male guinea pigs if we have exhausted other options for successful
+              pairings.
+            </p>
+          </li>
+        </ol>
+      </div>
+
+      <Image
+        src={imageThree}
+        alt="A guinea pig"
+        class="overflow-hidden rounded-lg shadow-2xl shadow-plum-5"
+      />
+
+      <Image
+        src={imageFour}
+        alt="A guinea pig"
+        class="overflow-hidden rounded-lg shadow-2xl shadow-plum-5"
+      />
+
+      <!-- Adoption Process -->
+      <div>
+        <h1
+          class="font-yrsa text-3xl font-bold underline decoration-plum-9 decoration-2"
+        >
+          Adoption Process
+        </h1>
+        <ol class="ml-5 list-outside list-decimal">
+          <li class="py-3 pl-5">
+            <p>
+              Initial Contact:{" "}
+              <a
+                class="text-teal9 underline"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdqYwW5VEufOfPojurwd53F6pADJ3zVbuK1ZLExqdqRyqyBEg/viewform"
+              >
+                Reach out to us via our contact form
+              </a>{" "}
+              to express your interest in adopting a guinea pig.
+            </p>
+          </li>
+
+          <li class="py-3 pl-5">
+            <p>
+              <strong>Home Assessment:</strong> Tell us about and provide pictures
+              of your setup. In some circumstances we may schedule a home visit to
+              ensure your home is suitable for guinea pigs.
+            </p>
+          </li>
+
+          <li class="py-3 pl-5">
+            <p>
+              <strong>Meet the Piggies:</strong> Visit us at our rescue in Richmond
+              to meet our availabe guinea pigs and find your perfect companion.
+            </p>
+          </li>
+
+          <li class="py-3 pl-5">
+            <p>
+              <strong>Donation:</strong> Once you've found your furry friend, we
+              ask for a dicsretionary donation which allows us to continue to run
+              the rescue and help more guinea pigs in need.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </Container>
+</Layout>
