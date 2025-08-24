@@ -1,0 +1,94 @@
+---
+import Container from "../components/Container.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contact Us" description="Get in touch with This Little Piggy">
+  <Container className="mx-auto mt-12 max-w-3xl pb-24">
+    <Header>Contact Us</Header>
+    <p>
+      Please be patient when contacting the rescue. We cannot always get to
+      messages as quickly as we would like but we will be in touch as soon as we
+      can.
+    </p>
+    <div class="mt-9 flex flex-col gap-7">
+      <div
+        class="flex h-fit flex-col gap-6 rounded-lg border-2 border-plum-10 bg-sage-1 p-6"
+      >
+        <a
+          href={"https://docs.google.com/forms/d/e/1FAIpQLSdqYwW5VEufOfPojurwd53F6pADJ3zVbuK1ZLExqdqRyqyBEg/viewform?usp=sharing"}
+          class="font-yrsa text-4xl font-bold underline decoration-plum-10 transition-colors ease-in-out hover:text-teal-11 hover:decoration-teal-9"
+        >
+          Adoption Enquiries
+        </a>
+        <p>
+          Please enter your details in our form, and we will get back to you as
+          soon as possible.
+        </p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdqYwW5VEufOfPojurwd53F6pADJ3zVbuK1ZLExqdqRyqyBEg/viewform?usp=sharing"
+          class="font-bold text-teal-9 underline"
+        >
+          Complete the form here
+        </a>
+      </div>
+      <div
+        class="col-span-3 flex h-fit flex-col gap-6 rounded-lg border-2 border-plum-10 bg-sage-1 p-6"
+      >
+        <a
+          href={"https://docs.google.com/forms/d/e/1FAIpQLScHfnA_SFHCadB0uYQkRJCFzZU5uGPHlLGjD_B_pIv1Ob2Kig/viewform?usp=sharing"}
+          class="font-yrsa text-4xl font-bold underline decoration-plum-10 transition-colors ease-in-out hover:text-teal-11 hover:decoration-teal-9"
+        >
+          Surrender A Guinea Pig
+        </a>
+        <p>
+          If you require help, you can fill in this form and we will get back to
+          you as soon as possible.
+        </p>
+        <p>
+          You can find more information{" "}
+          <a href={"/surrender"} class="font-bold text-teal-9 underline">
+            here
+          </a>
+          .
+        </p>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScHfnA_SFHCadB0uYQkRJCFzZU5uGPHlLGjD_B_pIv1Ob2Kig/viewform?usp=sharing"
+          class="font-bold text-teal-9 underline"
+        >
+          Complete the form here
+        </a>
+      </div>
+      <div
+        class="col-span-3 flex h-fit flex-col gap-6 rounded-lg border-2 border-plum-10 bg-sage-1 p-6"
+      >
+        <h1 class="font-yrsa text-4xl font-bold underline decoration-plum-10">
+          Other Enquiries
+        </h1>
+        <p>
+          Please contact us directly using the options below if you have any
+          other questions about what we do.
+        </p>
+        <div>
+          <p class="font-bold">Heather Reid:</p>
+          <a
+            href="mailto:mrsheatherreid@hotmail.com"
+            class="font-bold text-teal-9 underline"
+          >
+            mrsheatherreid@hotmail.com
+          </a>
+        </div>
+        <div>
+          <p>...or you can</p>
+          <a
+            href="https://www.facebook.com/richmondpiggies/?locale=en_GB"
+            class="font-bold text-teal-9 underline"
+          >
+            Message us on Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout>

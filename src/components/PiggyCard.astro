@@ -45,36 +45,22 @@ const { pig } = Astro.props;
     <div class="flex flex-wrap gap-3">
       {
         pig.sex && (
-          <span class="text-background bg-sage3 rounded-lg px-[4px] py-1 text-sm">
+          <span class="rounded-lg bg-sage-3 px-[4px] py-1 text-sm">
             {pig.sex}
           </span>
         )
       }
       {
         pig.companionship && (
-          <span class="text-background bg-sage3 rounded-lg px-[4px] py-1 text-sm">
+          <span class="rounded-lg bg-sage-3 px-[4px] py-1 text-sm">
             {pig.companionship}
           </span>
         )
       }
       {
         pig.neutered && (
-          <span class="text-background bg-sage3 rounded-lg px-[4px] py-1 text-sm">
+          <span class="rounded-lg bg-sage-3 px-[4px] py-1 text-sm">
             {pig.neutered}
-          </span>
-        )
-      }
-      {
-        pig.healthChecked && (
-          <span class="text-background rounded-lg bg-emerald-500 px-[4px] py-1 text-sm">
-            Health Checked ✅
-          </span>
-        )
-      }
-      {
-        pig.status && (
-          <span class="text-background rounded-lg bg-blue-500 px-[4px] py-1 text-sm">
-            {pig.status}
           </span>
         )
       }

@@ -12,9 +12,16 @@ export interface Props {
 const { message, link } = Astro.props;
 ---
 
-<div class="flex w-fit items-center gap-x-3 rounded-lg bg-teal-4 p-3 align-middle shadow-xl shadow-teal-3">
+<div
+  class="flex w-fit items-center gap-x-3 rounded-lg bg-teal-4 p-3 align-middle shadow-xl shadow-teal-3"
+>
   <span class="font-bold text-teal-12">{message}</span>
-  <Link variant="teal" href={link.href} client:load>
+  <Link
+    variant="teal"
+    href={link.href}
+    client:load
+    className="w-fit whitespace-nowrap"
+  >
     {link.text}
   </Link>
 </div>

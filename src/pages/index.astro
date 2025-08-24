@@ -58,10 +58,10 @@ const piggyCount = await getCountOfEntriesFromDatabase(
           <div class="flex flex-col justify-between gap-y-10 md:col-span-2">
             <div class="flex w-full flex-col gap-y-5">
               <Banner
-                message="This Little Piggy in the news!"
+                message="This Little Piggy has moved! We are now based in Corsham, Wiltshire but still offer rescue back up for life for any of our piggies, please get in touch to arrange."
                 link={{
-                  text: "Read About Us",
-                  href: "https://www.theguardian.com/lifeandstyle/2023/oct/30/the-pets-ill-never-forget-pudding-and-popcorn-the-guinea-pigs-who-saved-me-during-lockdown",
+                  text: "Contact Us",
+                  href: "/contact",
                 }}
               />
               <Title>Welcome to This Little Piggy</Title>
@@ -103,7 +103,7 @@ const piggyCount = await getCountOfEntriesFromDatabase(
             </div>
           </div>
           <FloatingBanner
-            class="relative top-28 w-fit px-4 lg:absolute lg:top-12 lg:right-12"
+            class="relative top-20 w-fit px-4 lg:absolute lg:top-28 lg:right-12"
           >
             <span>Over</span>
             <span class="text-2xl font-black">{piggyCount}</span>

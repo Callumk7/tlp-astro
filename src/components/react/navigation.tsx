@@ -58,9 +58,9 @@ function NavigationLinks({
               <a
                 href={link.href}
                 className={clsx(
-                  "text-sage10 hover:text-sage12 font-inter font-semibold transition-colors ease-in-out",
+                  "font-inter font-semibold text-sage-10 transition-colors ease-in-out hover:text-sage-12",
                   pathname === link.href &&
-                    "text-sage12 decoration-plum9 underline decoration-2",
+                    "text-sage-12 underline decoration-plum-9 decoration-2",
                 )}
               >
                 {link.name}
