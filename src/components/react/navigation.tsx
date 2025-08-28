@@ -43,6 +43,7 @@ function NavigationLinks({
   isDropdownMenu?: boolean;
   pathname?: string;
 }) {
+  console.log(`${pathname}`);
   return (
     <>
       {links.map((link) => {
