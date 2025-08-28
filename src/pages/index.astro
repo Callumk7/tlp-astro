@@ -8,6 +8,7 @@ import FloatingBanner from "../components/FloatingBanner.astro";
 import InfoBoxes from "../components/InfoBoxes.astro";
 import { getCountOfEntriesFromDatabase } from "../lib/notion/get-entries";
 import { Client } from "@notionhq/client";
+import VerticalImageStrip from "../components/VerticalImageStrip.astro";
 
 const infoBoxData = [
   {
@@ -49,7 +50,7 @@ const piggyCount = await getCountOfEntriesFromDatabase(
 
 <Layout
   title="This Little Piggy - Guinea Pig Rescue & Rehoming"
-  description="This Little Piggy is a guinea pig rescue in Richmond, London, dedicated to rehoming guinea pigs and providing a safe haven for those in need."
+  description="This Little Piggy is a guinea pig rescue in Corsham, Wiltshire, dedicated to rehoming guinea pigs and providing a safe haven for those in need."
 >
   <main class="relative bottom-0">
     <section class="relative mx-auto max-w-6xl">
@@ -66,10 +67,10 @@ const piggyCount = await getCountOfEntriesFromDatabase(
               />
               <Title>Welcome to This Little Piggy</Title>
               <p class="justify-self-start">
-                We are a guinea pig rescue located in the heart of Richmond,
-                London. We have rescued over 1000 guinea pigs since our founding
-                in 2012 and are passionate about providing a haven to guinea
-                pigs in need and finding them new forever homes.
+                We are a guinea pig rescue located Corsham, Wiltshire. We have
+                rescued over 1000 guinea pigs since our founding in 2012 and are
+                passionate about providing a haven to guinea pigs in need and
+                finding them new forever homes.
               </p>
             </div>
             <div class="flex flex-col gap-y-5">
@@ -109,6 +110,7 @@ const piggyCount = await getCountOfEntriesFromDatabase(
             <span class="text-2xl font-black">{piggyCount}</span>
             <span>piggies need loving homes!</span>
           </FloatingBanner>
+          <VerticalImageStrip />
         </div>
       </Container>
     </section>
