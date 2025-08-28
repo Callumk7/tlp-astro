@@ -81,3 +81,7 @@
   --font-inter: var(--font-inter);
   --font-playfair: var(--font-playfair);
 }
+
+html .link {
+  @apply text-plum-9 underline hover:text-plum-7;
+}
