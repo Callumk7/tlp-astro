@@ -1,0 +1,46 @@
+---
+import Container from "../components/Container.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="This Little Piggy - Donate"
+  description="Donate to This Little Piggy and support us in our mission to give every piggy the life they deserve"
+>
+  <Container className="mx-auto mt-12 mb-24 flex max-w-5xl flex-col gap-4">
+    <Header>Donate to This Little Piggy</Header>
+    <p>
+      Thank you for considering donating to This Little Piggy. This Little Piggy
+      is volunteer run and we always grateful of any size donation which helps
+      us to continue to rescue guinea pigs in need.
+    </p>
+    <p>
+      Our Paypal is temporarily out of action, but you can direct transfer to
+      This Little Piggy’s account using the details below:
+    </p>
+    <ul class="mb-7 ml-5 list-outside list-disc space-y-3">
+      <li>
+        <strong>Account Name:</strong> This Little Piggy
+      </li>
+      <li>
+        <strong>Account Number:</strong> 26003362
+      </li>
+      <li>
+        <strong>Sort Code:</strong> 30-99-50
+      </li>
+    </ul>
+    <p>
+      Or{" "}
+      <a
+        class="link"
+        href="https://www.amazon.co.uk/hz/wishlist/ls/DOBZ9DLMSOMF?ref_=wl_share"
+        target="_blank"
+      >
+        check out our amazon wishlist
+      </a>{" "}
+      for supplies that are always in demand at the rescue.
+    </p>
+    <p>Thank you for your support!</p>
+  </Container>
+</Layout>
