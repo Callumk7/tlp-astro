@@ -8,6 +8,7 @@ import imageOne from "../assets/how-to-adopt/1.jpg";
 import imageTwo from "../assets/how-to-adopt/2.jpg";
 import imageThree from "../assets/how-to-adopt/3.jpg";
 import imageFour from "../assets/how-to-adopt/4.jpg";
+import { ADOPTION_FORM_URL } from "../config/constants";
 ---
 
 <Layout
@@ -224,10 +225,7 @@ import imageFour from "../assets/how-to-adopt/4.jpg";
           <li class="py-3 pl-5">
             <p>
               Initial Contact:{" "}
-              <a
-                class="text-teal9 underline"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdqYwW5VEufOfPojurwd53F6pADJ3zVbuK1ZLExqdqRyqyBEg/viewform"
-              >
+              <a class="text-teal9 underline" href={ADOPTION_FORM_URL}>
                 Reach out to us via our contact form
               </a>{" "}
               to express your interest in adopting a guinea pig.
@@ -252,7 +250,7 @@ import imageFour from "../assets/how-to-adopt/4.jpg";
           <li class="py-3 pl-5">
             <p>
               <strong>Donation:</strong> Once you've found your furry friend, we
-              ask for a dicsretionary donation which allows us to continue to run
+              ask for a discretionary donation which allows us to continue to run
               the rescue and help more guinea pigs in need.
             </p>
           </li>
