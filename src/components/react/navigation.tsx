@@ -3,6 +3,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuPortal,
   DropdownMenuTrigger,
 } from "../ui/dropdown";
 import { MenuIcon } from "../ui/icons/menu";
@@ -87,12 +88,14 @@ export function NavBar({ pathname }: { pathname: string }) {
         <DropdownMenuTrigger className="cursor-pointer lg:hidden">
           <MenuIcon className="pointer-events-none h-9 w-9" />
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="mx-6 w-[80vw]">
-          <NavigationLinks isDropdownMenu pathname={pathname} />
-          <Button className="block w-full lg:hidden" variant={"primary"}>
-            <a href={"/contact"}>Contact Us</a>
-          </Button>
-        </DropdownMenuContent>
+        <DropdownMenuPortal>
+          <DropdownMenuContent className="mx-6 w-[80vw]">
+            <NavigationLinks isDropdownMenu pathname={pathname} />
+            <Button className="block w-full lg:hidden" variant={"primary"}>
+              <a href={"/contact"}>Contact Us</a>
+            </Button>
+          </DropdownMenuContent>
+        </DropdownMenuPortal>
       </DropdownMenu>
       <div className="flex gap-7">
         <Button className="hidden lg:block" variant={"primary"}>
