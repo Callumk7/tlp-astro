@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -76,16 +77,21 @@ function NavigationLinks({
 }
 
 export function NavBar({ pathname }: { pathname: string }) {
+  const [open, setOpen] = useState(false);
   return (
     <nav className="relative z-20 mx-auto flex w-4/5 flex-row items-center justify-end py-5 lg:justify-between lg:gap-12">
       {/*Standard navigation menu, inline when screens are large or above.*/}
       <ul className="hidden flex-row items-center justify-start gap-8 lg:flex">
         <NavigationLinks pathname={pathname} />
       </ul>
-      {/*Dropdown menu navigation for smaller screens. Will be hidden if the inline menu 
+      {/*Dropdown menu navigation for smaller screens. Will be hidden if the inline menu
       is visible*/}
-      <DropdownMenu>
-        <DropdownMenuTrigger className="cursor-pointer lg:hidden">
+      <DropdownMenu open={open} onOpenChange={setOpen}>
+        <DropdownMenuTrigger
+          className="cursor-pointer lg:hidden"
+          onPointerDown={(e) => e.preventDefault()}
+          onClick={() => setOpen((o) => !o)}
+        >
           <MenuIcon className="pointer-events-none h-9 w-9" />
         </DropdownMenuTrigger>
         <DropdownMenuPortal>
