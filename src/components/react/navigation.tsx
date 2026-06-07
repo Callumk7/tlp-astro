@@ -84,7 +84,7 @@ export function NavBar({ pathname }: { pathname: string }) {
       {/*Dropdown menu navigation for smaller screens. Will be hidden if the inline menu 
       is visible*/}
       <DropdownMenu>
-        <DropdownMenuTrigger className="lg:hidden">
+        <DropdownMenuTrigger className="cursor-pointer lg:hidden">
           <MenuIcon className="h-9 w-9" />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="mx-6 w-[80vw]">
