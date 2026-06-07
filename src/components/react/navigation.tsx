@@ -85,7 +85,7 @@ export function NavBar({ pathname }: { pathname: string }) {
       is visible*/}
       <DropdownMenu>
         <DropdownMenuTrigger className="cursor-pointer lg:hidden">
-          <MenuIcon className="h-9 w-9" />
+          <MenuIcon className="pointer-events-none h-9 w-9" />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="mx-6 w-[80vw]">
           <NavigationLinks isDropdownMenu pathname={pathname} />
