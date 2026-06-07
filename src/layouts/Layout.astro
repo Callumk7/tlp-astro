@@ -20,11 +20,11 @@ const { title, description, image } = Astro.props;
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} image={image} />
-    <Analytics />
   </head>
   <body
     class="h-full min-h-screen bg-gradient-to-tr from-sage-1 to-teal-2 font-oxygen text-sage-12"
   >
+    <Analytics />
     <NavBar client:load pathname={pathname} />
     <slot />
   </body>
